@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+<br>
+<h1 class="headertekst"> Image Classifier </h1>
+<br>
+
+<div class="center-div">
+    <form id="upload-file" method="post" enctype="multipart/form-data" style="    margin: 0 auto;
+    width: 100px;">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="center-div image-section " style="display:none;" >
+        <div class=" center-div  img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="center-btn">
+            <button type="button" class=" btn btn-primary btn-lg " id="btn-predict" >Predict!</button>
+        </div>
+    </div>
+
+    <div class="center-div loader " style="display:none;" ></div>
+
+    <h3 id="result" class="headertekst">
+        <span> </span>
+    </h3>
+
+</div>
+
+{% endblock %}
